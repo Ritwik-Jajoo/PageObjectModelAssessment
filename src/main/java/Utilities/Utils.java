@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.List;
+
 public class Utils extends Setup {
 
     public static void holdExecution(int seconds) {
@@ -53,6 +55,19 @@ public class Utils extends Setup {
                 flag = true;
         } catch (NoSuchElementException e) {
             flag = false;
+        }
+        return flag;
+    }
+
+    public static boolean arePresent(List<WebElement> elements, List<String> actual) {
+        boolean flag = false;
+        for (int i = 0; i < actual.size(); i++) {
+            if (elements.get(i).getText().equalsIgnoreCase(actual.get(i))) {
+                flag = true;
+            } else {
+                flag = false;
+                break;
+            }
         }
         return flag;
     }
