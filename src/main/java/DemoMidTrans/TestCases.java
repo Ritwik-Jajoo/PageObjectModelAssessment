@@ -31,6 +31,12 @@ public class TestCases extends Setup {
         Assert.assertTrue(basePage.shoppingCartDetailsAreCorrect());
     }
 
+    @Test(priority = 2)
+    public void verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp(){
+        basePage.clickOnBuyNowButton();
+        Assert.assertTrue(basePage.shoppingCartDetailsAreCorrect());
+    }
+
     @AfterClass
     public void tearDown() {
         driver.quit();

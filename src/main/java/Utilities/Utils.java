@@ -62,7 +62,6 @@ public class Utils extends Setup {
     public static boolean arePresent(List<WebElement> elements, List<String> actual) {
         boolean flag = false;
         for (int i = 0; i < actual.size(); i++) {
-            System.out.println(elements.get(i).getText());
             if (elements.get(i).getText().equalsIgnoreCase(actual.get(i))) {
                 flag = true;
             } else {
