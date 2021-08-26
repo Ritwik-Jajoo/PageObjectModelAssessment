@@ -24,7 +24,7 @@ public class BasePage<elements1> extends Utils {
     @FindBy(xpath = "(//div[@class='cart-section']/table//tbody)[1]/tr/td")
     List<WebElement> ShoppingCartTableDetails;
 
-    public List<String> listOfShoppingCartElements(){
+    public List<String> listOfShoppingCartElements() {
         List<String> elements = new ArrayList<>();
         elements.add("Midtrans Pillow");
         elements.add("× 1");
@@ -35,11 +35,11 @@ public class BasePage<elements1> extends Utils {
         return elements;
     }
 
-    public void clickOnBuyNowButton(){
+    public void clickOnBuyNowButton() {
         click(BuyNowButton);
     }
 
-    public void shoppingCartDetailsAreCorrect(){
-        arePresent(ShoppingCartTableDetails,listOfShoppingCartElements());
+    public boolean shoppingCartDetailsAreCorrect() {
+        return arePresent(ShoppingCartTableDetails, listOfShoppingCartElements());
     }
 }
