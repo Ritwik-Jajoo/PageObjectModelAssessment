@@ -71,4 +71,15 @@ public class Utils extends Setup {
         }
         return flag;
     }
+
+    public void enterTextForListOfElements(List<WebElement> elements, List<String> text) {
+        for (int i = 0; i < text.size(); i++) {
+            enterText(elements.get(i), text.get(i));
+        }
+    }
+
+    public void switchToFrame(String id){
+        driver.switchTo().frame(id);
+    }
+
 }
