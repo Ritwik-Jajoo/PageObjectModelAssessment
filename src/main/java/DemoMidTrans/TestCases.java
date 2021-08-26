@@ -28,6 +28,7 @@ public class TestCases extends Setup {
     @Test(priority = 1)
     public void verifyShoppingCartDetails() {
         basePage.clickOnBuyNowButton();
+        System.out.println("Hey");
         Assert.assertTrue(basePage.shoppingCartDetailsAreCorrect());
     }
 
