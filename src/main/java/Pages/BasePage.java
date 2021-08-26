@@ -27,6 +27,9 @@ public class BasePage<elements1> extends Utils {
     @FindBy(xpath = "//div[@class='cart-content buying']")
     WebElement CheckoutPopUp;
 
+    @FindBy(xpath = "(//div[@class='cart-section'])[2]//td")
+    List<WebElement> CustomerDetails;
+
     public List<String> listOfShoppingCartElements() {
         List<String> elements = new ArrayList<>();
         elements.add("Midtrans Pillow");
@@ -38,6 +41,23 @@ public class BasePage<elements1> extends Utils {
         return elements;
     }
 
+    public List<String> listOfCustomerDetails() {
+        List<String> elements = new ArrayList<>();
+        elements.add("Name");
+        elements.add("");
+        elements.add("Email");
+        elements.add("");
+        elements.add("Phone no");
+        elements.add("");
+        elements.add("City");
+        elements.add("");
+        elements.add("Address");
+        elements.add("MidPlaza 2, 4th Floor Jl.Jend.Sudirman Kav.10-11");
+        elements.add("Postal Code");
+        elements.add("");
+        return elements;
+    }
+
     public void clickOnBuyNowButton() {
         click(BuyNowButton);
     }
@@ -46,7 +66,12 @@ public class BasePage<elements1> extends Utils {
         return arePresent(ShoppingCartTableDetails, listOfShoppingCartElements());
     }
 
-    public boolean checkoutPopUpIsDisplayed(){
+    public boolean checkoutPopUpIsDisplayed() {
         return isDisplayed(CheckoutPopUp);
     }
+
+    public boolean CustomerDetailsAreCorrect() {
+        return arePresent(CustomerDetails, listOfCustomerDetails());
+    }
+
 }

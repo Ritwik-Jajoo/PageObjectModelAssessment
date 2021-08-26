@@ -25,17 +25,22 @@ public class TestCases extends Setup {
         driver.get("https://demo.midtrans.com/");
     }
 
-    @Test(priority = 1)
-    public void verifyShoppingCartDetails() {
+    @Test(priority = 1, groups = {"regression"})
+    public void verifyShoppingCartDetailsArePresent() {
         basePage.clickOnBuyNowButton();
-        System.out.println("Hey");
         Assert.assertTrue(basePage.shoppingCartDetailsAreCorrect());
     }
 
-    @Test(priority = 2)
-    public void verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp(){
+    @Test(priority = 2, groups = {"smoke", "regression"})
+    public void verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp() {
         basePage.clickOnBuyNowButton();
-        Assert.assertTrue(basePage.shoppingCartDetailsAreCorrect());
+        Assert.assertTrue(basePage.checkoutPopUpIsDisplayed());
+    }
+
+    @Test(priority = 3, groups = {"regression"})
+    public void verifyCustomerDetailsArePresent() {
+        basePage.clickOnBuyNowButton();
+        Assert.assertTrue(basePage.CustomerDetailsAreCorrect());
     }
 
     @AfterClass
