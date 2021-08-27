@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.*;
+
 public class OrderSummaryPage extends BasePage {
 
     public OrderSummaryPage(WebDriver driver) {
@@ -15,6 +17,16 @@ public class OrderSummaryPage extends BasePage {
     @FindBy(xpath = "//div[@class='app-container']")
     WebElement OrderSummaryPopUp;
 
+    @FindBy(xpath = "//td[@class='table-item text-body']/../td")
+    List<WebElement> OrderDetails;
+
+    public List<String> listOfOrderDetails() {
+        List<String> elements = new ArrayList<>();
+        elements.add("Midtrans Pillow");
+        elements.add("20,000");
+        return elements;
+    }
+
     String id = "snap-midtrans";
 
     public void switchToOrderSummaryFrame() {
@@ -23,6 +35,10 @@ public class OrderSummaryPage extends BasePage {
 
     public boolean orderSummaryPopUpIsVisible() {
         return isDisplayed(OrderSummaryPopUp);
+    }
+
+    public boolean orderDetailsArePresent() {
+        return arePresent(OrderDetails, listOfOrderDetails());
     }
 
 }

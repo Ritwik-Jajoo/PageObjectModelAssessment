@@ -63,6 +63,14 @@ public class TestCases extends Setup {
         Assert.assertTrue(orderSummaryPage.orderSummaryPopUpIsVisible());
     }
 
+    @Test(priority = 6, groups = {"regression"})
+    public void verifyProductOrderDetailsOnOrderSummaryPopUpPage(){
+        basePage.clickOnBuyNowButton();
+        checkoutPage.clickOnCheckoutButton();
+        orderSummaryPage.switchToOrderSummaryFrame();
+        Assert.assertTrue(orderSummaryPage.orderDetailsArePresent());
+    }
+
 
     @AfterClass
     public void tearDown() {
