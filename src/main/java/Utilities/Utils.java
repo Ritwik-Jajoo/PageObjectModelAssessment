@@ -78,8 +78,22 @@ public class Utils extends Setup {
         }
     }
 
-    public void switchToFrame(String id){
+    public void switchToFrame(String id) {
         driver.switchTo().frame(id);
     }
+
+    public boolean areDisplayed(List<WebElement> elements) {
+        boolean flag = false;
+        for (WebElement e : elements) {
+            if (isDisplayed(e))
+                flag = true;
+            else {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+
 
 }

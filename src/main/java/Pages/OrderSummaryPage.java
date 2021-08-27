@@ -20,6 +20,9 @@ public class OrderSummaryPage extends BasePage {
     @FindBy(xpath = "//td[@class='table-item text-body']/../td")
     List<WebElement> OrderDetails;
 
+    @FindBy(xpath = "//a[@class='button-main-content']")
+    WebElement ContinueButton;
+
     public List<String> listOfOrderDetails() {
         List<String> elements = new ArrayList<>();
         elements.add("Midtrans Pillow");
@@ -39,6 +42,11 @@ public class OrderSummaryPage extends BasePage {
 
     public boolean orderDetailsArePresent() {
         return arePresent(OrderDetails, listOfOrderDetails());
+    }
+
+    public void clickOnContinueButton() {
+        click(ContinueButton);
+        holdExecution(2);
     }
 
 }

@@ -3,6 +3,7 @@ package DemoMidTrans;
 import Pages.BasePage;
 import Pages.CheckoutPage;
 import Pages.OrderSummaryPage;
+import Pages.SelectPaymentPage;
 import Utilities.Setup;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -17,6 +18,7 @@ public class TestCases extends Setup {
     BasePage basePage;
     CheckoutPage checkoutPage;
     OrderSummaryPage orderSummaryPage;
+    SelectPaymentPage selectPaymentPage;
 
     @BeforeClass
     public void launchBrowser() {
@@ -24,6 +26,7 @@ public class TestCases extends Setup {
         basePage = new BasePage(driver);
         checkoutPage = new CheckoutPage(driver);
         orderSummaryPage = new OrderSummaryPage(driver);
+        selectPaymentPage = new SelectPaymentPage(driver);
     }
 
     @BeforeMethod
@@ -64,13 +67,30 @@ public class TestCases extends Setup {
     }
 
     @Test(priority = 6, groups = {"regression"})
-    public void verifyProductOrderDetailsOnOrderSummaryPopUpPage(){
+    public void verifyProductOrderDetailsOnOrderSummaryPopUpPage() {
         basePage.clickOnBuyNowButton();
         checkoutPage.clickOnCheckoutButton();
         orderSummaryPage.switchToOrderSummaryFrame();
         Assert.assertTrue(orderSummaryPage.orderDetailsArePresent());
     }
 
+    @Test(priority = 7, groups = {"smoke", "regression"})
+    public void verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage() {
+        basePage.clickOnBuyNowButton();
+        checkoutPage.clickOnCheckoutButton();
+        orderSummaryPage.switchToOrderSummaryFrame();
+        orderSummaryPage.clickOnContinueButton();
+        Assert.assertTrue(selectPaymentPage.selectPaymentPageIsDisplayed());
+    }
+
+    @Test(priority = 8, groups = {"regression"})
+    public void verifyAllThePaymentOptionsAreListedOnSelectPaymentPage() {
+        basePage.clickOnBuyNowButton();
+        checkoutPage.clickOnCheckoutButton();
+        orderSummaryPage.switchToOrderSummaryFrame();
+        orderSummaryPage.clickOnContinueButton();
+        Assert.assertTrue(selectPaymentPage.paymentOptionsAreDisplayed());
+    }
 
     @AfterClass
     public void tearDown() {
