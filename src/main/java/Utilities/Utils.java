@@ -3,6 +3,8 @@ package Utilities;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class Utils extends Setup {
@@ -105,6 +107,12 @@ public class Utils extends Setup {
     public void scrollTillTheElementIsVisible(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView()", element);
+    }
+
+    public String getCurrentDateAndTime(){
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss a");
+        LocalDateTime now = LocalDateTime.now();
+        return dtf.format(now);
     }
 
 }

@@ -17,6 +17,7 @@ public class TestCases extends Setup {
     OrderSummaryPage orderSummaryPage;
     SelectPaymentPage selectPaymentPage;
     CreditDebitCardPage creditDebitCardPage;
+    BankPaymentPage bankPaymentPage;
 
     @BeforeClass
     public void launchBrowser() {
@@ -26,6 +27,7 @@ public class TestCases extends Setup {
         orderSummaryPage = new OrderSummaryPage(driver);
         selectPaymentPage = new SelectPaymentPage(driver);
         creditDebitCardPage = new CreditDebitCardPage(driver);
+        bankPaymentPage = new BankPaymentPage(driver);
     }
 
     @BeforeMethod
@@ -113,9 +115,32 @@ public class TestCases extends Setup {
         Assert.assertTrue(creditDebitCardPage.clickOnThirdCouponCodeAndValidateOrderAmount());
     }
 
+    @Test(priority = 11, groups = {"smoke", "regression"})
+    public void verifyEnteringValidCardDetailsAndClickingOnPayNow() {
+        basePage.clickOnBuyNowButton();
+        checkoutPage.clickOnCheckoutButton();
+        orderSummaryPage.switchToOrderSummaryFrame();
+        orderSummaryPage.clickOnContinueButton();
+        selectPaymentPage.clickOnCreditDebitCardButton();
+        creditDebitCardPage.enterCardDetails();
+        creditDebitCardPage.clickOnPayNowButton();
+    }
+
+    @Test(priority = 12, groups = {"regression"})
+    public void verifyDetailsOnBankPaymentScreen() {
+        basePage.clickOnBuyNowButton();
+        checkoutPage.clickOnCheckoutButton();
+        orderSummaryPage.switchToOrderSummaryFrame();
+        orderSummaryPage.clickOnContinueButton();
+        selectPaymentPage.clickOnCreditDebitCardButton();
+        creditDebitCardPage.enterCardDetails();
+        creditDebitCardPage.clickOnPayNowButton();
+        Assert.assertTrue(bankPaymentPage.detailsAreDisplayedOnBankPaymentScreen());
+    }
+
 
     @AfterClass
-    public void tearDown () {
+    public void tearDown() {
         driver.quit();
     }
 

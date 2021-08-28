@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CreditDebitCardPage extends BasePage {
@@ -22,6 +23,20 @@ public class CreditDebitCardPage extends BasePage {
 
     @FindBy(xpath = "//div[@class='checkbox checkbox-left']//input[@type='checkbox']")
     List<WebElement> CouponCodes;
+
+    @FindBy(xpath = "(//div[@class='card-container'])[1]//input")
+    List<WebElement> CardDetails;
+
+    @FindBy(xpath = "//a[@class='button-main-content']")
+    WebElement PayNowButton;
+
+    public List<String> cardDetailsToBeEntered(){
+        List<String> elements = new ArrayList<>();
+        elements.add("4811 1111 1111 1114");
+        elements.add("02 / 22");
+        elements.add("123");
+        return elements;
+    }
 
     public boolean CreditDebitCardDetailsDisplayed() {
         return isDisplayed(CreditDebitCardDetailsContainer);
@@ -52,6 +67,15 @@ public class CreditDebitCardPage extends BasePage {
         scrollTillTheElementIsVisible(OrderAmount);
         holdExecution(1);
         return isPresent(OrderAmount,"19,000");
+    }
+
+    public void enterCardDetails(){
+        enterTextForListOfElements(CardDetails,cardDetailsToBeEntered());
+    }
+
+    public void clickOnPayNowButton(){
+        click(PayNowButton);
+        holdExecution(2);
     }
 
 }
