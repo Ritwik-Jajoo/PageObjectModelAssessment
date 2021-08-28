@@ -1,9 +1,6 @@
 package Utilities;
 
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
@@ -95,5 +92,19 @@ public class Utils extends Setup {
         return flag;
     }
 
+    public static boolean isPresent(WebElement element, String actual) {
+        boolean flag = false;
+        if (element.getText().equals(actual)) {
+                flag = true;
+        } else {
+                flag = false;
+        }
+        return flag;
+    }
+
+    public void scrollTillTheElementIsVisible(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView()", element);
+    }
 
 }

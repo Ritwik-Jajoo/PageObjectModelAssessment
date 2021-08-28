@@ -1,9 +1,6 @@
 package DemoMidTrans;
 
-import Pages.BasePage;
-import Pages.CheckoutPage;
-import Pages.OrderSummaryPage;
-import Pages.SelectPaymentPage;
+import Pages.*;
 import Utilities.Setup;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -19,6 +16,7 @@ public class TestCases extends Setup {
     CheckoutPage checkoutPage;
     OrderSummaryPage orderSummaryPage;
     SelectPaymentPage selectPaymentPage;
+    CreditDebitCardPage creditDebitCardPage;
 
     @BeforeClass
     public void launchBrowser() {
@@ -27,6 +25,7 @@ public class TestCases extends Setup {
         checkoutPage = new CheckoutPage(driver);
         orderSummaryPage = new OrderSummaryPage(driver);
         selectPaymentPage = new SelectPaymentPage(driver);
+        creditDebitCardPage = new CreditDebitCardPage(driver);
     }
 
     @BeforeMethod
@@ -92,8 +91,31 @@ public class TestCases extends Setup {
         Assert.assertTrue(selectPaymentPage.paymentOptionsAreDisplayed());
     }
 
+    @Test(priority = 9, groups = {"smoke", "regression"})
+    public void verifyUserGetsRedirectedToCreditDebitCardDetailsScreen() {
+        basePage.clickOnBuyNowButton();
+        checkoutPage.clickOnCheckoutButton();
+        orderSummaryPage.switchToOrderSummaryFrame();
+        orderSummaryPage.clickOnContinueButton();
+        selectPaymentPage.clickOnCreditDebitCardButton();
+        Assert.assertTrue(creditDebitCardPage.CreditDebitCardDetailsDisplayed());
+    }
+
+    @Test(priority = 10, groups = {"regression"})
+    public void verifyClickingOnCouponCodesAndValidatingOrderAmount() {
+        basePage.clickOnBuyNowButton();
+        checkoutPage.clickOnCheckoutButton();
+        orderSummaryPage.switchToOrderSummaryFrame();
+        orderSummaryPage.clickOnContinueButton();
+        selectPaymentPage.clickOnCreditDebitCardButton();
+        Assert.assertTrue(creditDebitCardPage.clickOnFirstCouponCodeAndValidateOrderAmount());
+        Assert.assertTrue(creditDebitCardPage.clickOnSecondCouponCodeAndValidateOrderAmount());
+        Assert.assertTrue(creditDebitCardPage.clickOnThirdCouponCodeAndValidateOrderAmount());
+    }
+
+
     @AfterClass
-    public void tearDown() {
+    public void tearDown () {
         driver.quit();
     }
 
