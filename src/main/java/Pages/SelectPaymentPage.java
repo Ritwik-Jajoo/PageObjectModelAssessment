@@ -24,11 +24,11 @@ public class SelectPaymentPage extends BasePage {
         return isDisplayed(SelectPaymentTitleText);
     }
 
-    public boolean paymentOptionsAreDisplayed(){
+    public boolean paymentOptionsAreDisplayed() {
         return areDisplayed(PaymentOptions);
     }
 
-    public void clickOnCreditDebitCardButton(){
+    public void clickOnCreditDebitCardButton() {
         click(PaymentOptions.get(0));
         holdExecution(2);
     }

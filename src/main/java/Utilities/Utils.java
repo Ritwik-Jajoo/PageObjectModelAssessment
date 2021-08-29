@@ -81,6 +81,21 @@ public class Utils extends Setup {
         driver.switchTo().frame(id);
     }
 
+    public void switchToFrame(int index) {
+        driver.switchTo().frame(index);
+    }
+
+    public void switchToFrame(WebElement element) {
+        try {
+            driver.switchTo().frame(element);
+        } catch (NoSuchWindowException e) {
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
+        } catch (WebDriverException e) {
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
+        }
+    }
+
+
     public boolean areDisplayed(List<WebElement> elements) {
         boolean flag = false;
         for (WebElement e : elements) {
@@ -97,9 +112,9 @@ public class Utils extends Setup {
     public static boolean isPresent(WebElement element, String actual) {
         boolean flag = false;
         if (element.getText().equals(actual)) {
-                flag = true;
+            flag = true;
         } else {
-                flag = false;
+            flag = false;
         }
         return flag;
     }
@@ -109,10 +124,16 @@ public class Utils extends Setup {
         js.executeScript("arguments[0].scrollIntoView()", element);
     }
 
-    public String getCurrentDateAndTime(){
+    public String getCurrentDateAndTime() {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss a");
         LocalDateTime now = LocalDateTime.now();
         return dtf.format(now);
+    }
+
+    public String getCurrentFrame() {
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        String currentFrame = (String) jsExecutor.executeScript("return self.name");
+        return currentFrame;
     }
 
 }

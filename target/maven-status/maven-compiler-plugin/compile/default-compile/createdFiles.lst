@@ -1,0 +1,9 @@
+Pages\SelectPaymentPage.class
+Utilities\Utils.class
+DemoMidTrans\TestCases.class
+Pages\CreditDebitCardPage.class
+Pages\BankPaymentPage.class
+Pages\OrderSummaryPage.class
+Utilities\Setup.class
+Pages\CheckoutPage.class
+Pages\BasePage.class

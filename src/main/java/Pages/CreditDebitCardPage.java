@@ -30,11 +30,11 @@ public class CreditDebitCardPage extends BasePage {
     @FindBy(xpath = "//a[@class='button-main-content']")
     WebElement PayNowButton;
 
-    public List<String> cardDetailsToBeEntered(){
+    public List<String> cardDetailsToBeEntered() {
         List<String> elements = new ArrayList<>();
-        elements.add("4811 1111 1111 1114");
-        elements.add("02 / 22");
-        elements.add("123");
+        elements.add(properties.getProperty("cardNumber"));
+        elements.add(properties.getProperty("cardExpiryDate"));
+        elements.add(properties.getProperty("cardCVV"));
         return elements;
     }
 
@@ -42,38 +42,38 @@ public class CreditDebitCardPage extends BasePage {
         return isDisplayed(CreditDebitCardDetailsContainer);
     }
 
-    public boolean clickOnFirstCouponCodeAndValidateOrderAmount(){
+    public boolean clickOnFirstCouponCodeAndValidateOrderAmount() {
         scrollTillTheElementIsVisible(CouponCodes.get(0));
         click(CouponCodes.get(0));
         holdExecution(1);
         scrollTillTheElementIsVisible(OrderAmount);
         holdExecution(1);
-        return isPresent(OrderAmount,"19,990");
+        return isPresent(OrderAmount, "19,990");
     }
 
-    public boolean clickOnSecondCouponCodeAndValidateOrderAmount(){
+    public boolean clickOnSecondCouponCodeAndValidateOrderAmount() {
         scrollTillTheElementIsVisible(CouponCodes.get(1));
         click(CouponCodes.get(1));
         holdExecution(1);
         scrollTillTheElementIsVisible(OrderAmount);
         holdExecution(1);
-        return isPresent(OrderAmount,"18,000");
+        return isPresent(OrderAmount, "18,000");
     }
 
-    public boolean clickOnThirdCouponCodeAndValidateOrderAmount(){
+    public boolean clickOnThirdCouponCodeAndValidateOrderAmount() {
         scrollTillTheElementIsVisible(CouponCodes.get(2));
         click(CouponCodes.get(2));
         holdExecution(1);
         scrollTillTheElementIsVisible(OrderAmount);
         holdExecution(1);
-        return isPresent(OrderAmount,"19,000");
+        return isPresent(OrderAmount, "19,000");
     }
 
-    public void enterCardDetails(){
-        enterTextForListOfElements(CardDetails,cardDetailsToBeEntered());
+    public void enterCardDetails() {
+        enterTextForListOfElements(CardDetails, cardDetailsToBeEntered());
     }
 
-    public void clickOnPayNowButton(){
+    public void clickOnPayNowButton() {
         click(PayNowButton);
         holdExecution(2);
     }

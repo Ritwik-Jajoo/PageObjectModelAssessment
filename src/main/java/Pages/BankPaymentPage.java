@@ -18,6 +18,9 @@ public class BankPaymentPage extends BasePage {
     @FindBy(xpath = "//form[@id='acsForm']//div")
     List<WebElement> BankPaymentDetails;
 
+    @FindBy(xpath = "//div[@class=\"page-container scroll\"]//iframe")
+    WebElement IframeElement;
+
     public List<String> bankPaymentDetailsToBeDisplayed() {
         List<String> elements = new ArrayList<>();
         elements.add("Merchant Name:");
@@ -29,6 +32,10 @@ public class BankPaymentPage extends BasePage {
         elements.add("Card Number:");
         elements.add("481111-1114");
         return elements;
+    }
+
+    public void switchToBankPaymentPageFrame() {
+        switchToFrame(IframeElement);
     }
 
     public boolean detailsAreDisplayedOnBankPaymentScreen() {

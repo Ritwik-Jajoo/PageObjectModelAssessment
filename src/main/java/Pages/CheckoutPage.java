@@ -33,16 +33,16 @@ public class CheckoutPage extends BasePage {
     @FindBy(xpath = "//div[@class='cart-checkout']")
     WebElement CheckoutButton;
 
-    public List<String> listOfShoppingCartElements() {
-        List<String> elements = new ArrayList<>();
-        elements.add("Midtrans Pillow");
-        elements.add("× 1");
-        elements.add("");
-        elements.add("");
-        elements.add("Total");
-        elements.add("20,000");
-        return elements;
-    }
+//    public List<String> listOfShoppingCartElements() {
+//        List<String> elements = new ArrayList<>();
+//        elements.add("Midtrans Pillow");
+//        elements.add("× 1");
+//        elements.add(null);
+//        elements.add(null);
+//        elements.add("Total");
+//        elements.add("20,000");
+//        return elements;
+//    }
 
     public List<String> listOfCustomerDetails() {
         List<String> elements = new ArrayList<>();
@@ -63,19 +63,19 @@ public class CheckoutPage extends BasePage {
 
     public List<String> listOfCustomerDetailsToEnter() {
         List<String> elements = new ArrayList<>();
-        elements.add("Ritwik");
-        elements.add("ritwik@gmail.com");
-        elements.add("123456789");
-        elements.add("Kolkata");
-        elements.add("201303");
+        elements.add(properties.getProperty("customerName"));
+        elements.add(properties.getProperty("customerEmail"));
+        elements.add(properties.getProperty("customerPhoneNo"));
+        elements.add(properties.getProperty("customerCity"));
+        elements.add(properties.getProperty("customerPostalCode"));
         return elements;
     }
 
-    String address = "Vivek Vihar Kolkata";
+    String address = properties.getProperty("customerAddress");
 
 
     public boolean shoppingCartDetailsAreCorrect() {
-        return arePresent(ShoppingCartTableDetails, listOfShoppingCartElements());
+        return areDisplayed(ShoppingCartTableDetails);
     }
 
     public boolean checkoutPopUpIsDisplayed() {
