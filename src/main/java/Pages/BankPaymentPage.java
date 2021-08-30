@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class BankPaymentPage extends BasePage {
@@ -15,30 +14,42 @@ public class BankPaymentPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//form[@id='acsForm']//div")
-    List<WebElement> BankPaymentDetails;
-
     @FindBy(xpath = "//div[@class=\"page-container scroll\"]//iframe")
     WebElement IframeElement;
 
-    public List<String> bankPaymentDetailsToBeDisplayed() {
-        List<String> elements = new ArrayList<>();
-        elements.add("Merchant Name:");
-        elements.add("Rubicon Store ");
-        elements.add("Amount:");
-        elements.add("18000.00");
-        elements.add("Transaction Time:");
-        elements.add(getCurrentDateAndTime());
-        elements.add("Card Number:");
-        elements.add("481111-1114");
-        return elements;
-    }
+    @FindBy(xpath = "//div[@class='form-group']")
+    List<WebElement> BankPaymentDetails;
 
-    public void switchToBankPaymentPageFrame() {
-        switchToFrame(IframeElement);
-    }
+    @FindBy(xpath = "//input[@class='form-control input-xs']")
+    WebElement PasswordBox;
+
+    @FindBy(xpath = "//button[@class='btn btn-sm btn-success']")
+    WebElement OkButton;
+
+    @FindBy(xpath = "//div[@class='text-failed text-bold']")
+    WebElement FailMessage;
+
+    @FindBy(xpath = "//div[@class='final-panel failed']")
+    WebElement FailScreen;
 
     public boolean detailsAreDisplayedOnBankPaymentScreen() {
-        return arePresent(BankPaymentDetails, bankPaymentDetailsToBeDisplayed());
+        return areDisplayed(BankPaymentDetails);
+    }
+
+    public void switchToBankPaymentFrame() {
+        //wait(IframeElement);
+        switchToFrame(0);
+    }
+
+    public void enterPassword(String password){
+        enterText(PasswordBox, password);
+    }
+
+    public void clickOnOkButton(){
+        click(OkButton);
+    }
+
+    public boolean failMessageIsDisplayed(){
+        return isDisplayed(FailScreen);
     }
 }

@@ -99,9 +99,9 @@ public class Utils extends Setup {
     public boolean areDisplayed(List<WebElement> elements) {
         boolean flag = false;
         for (WebElement e : elements) {
-            if (isDisplayed(e))
+            if (isDisplayed(e)) {
                 flag = true;
-            else {
+            } else {
                 flag = false;
                 break;
             }
@@ -124,16 +124,7 @@ public class Utils extends Setup {
         js.executeScript("arguments[0].scrollIntoView()", element);
     }
 
-    public String getCurrentDateAndTime() {
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss a");
-        LocalDateTime now = LocalDateTime.now();
-        return dtf.format(now);
+    public void switchToDefaultContent(){
+        driver.switchTo().defaultContent();
     }
-
-    public String getCurrentFrame() {
-        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-        String currentFrame = (String) jsExecutor.executeScript("return self.name");
-        return currentFrame;
-    }
-
 }

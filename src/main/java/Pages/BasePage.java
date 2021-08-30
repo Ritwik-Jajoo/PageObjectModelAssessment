@@ -9,8 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 public class BasePage extends Utils {
@@ -36,10 +34,16 @@ public class BasePage extends Utils {
     @FindBy(xpath = "//a[@class='btn buy']")
     WebElement BuyNowButton;
 
+    @FindBy(xpath = "//div[@class='trans-status trans-success']")
+    WebElement SuccessMessage;
+
     public void clickOnBuyNowButton() {
         click(BuyNowButton);
         holdExecution(2);
     }
 
+    public boolean successMessageIsDisplayed(){
+        return isDisplayed(SuccessMessage);
+    }
 
 }

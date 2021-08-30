@@ -19,9 +19,9 @@ public class TestCases extends Setup {
     CreditDebitCardPage creditDebitCardPage;
     BankPaymentPage bankPaymentPage;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void launchBrowser() {
-        driver = launchBrowser("chrome");
+        driver = launchBrowser("firefox");
         basePage = new BasePage(driver);
         checkoutPage = new CheckoutPage(driver);
         orderSummaryPage = new OrderSummaryPage(driver);
@@ -30,7 +30,7 @@ public class TestCases extends Setup {
         bankPaymentPage = new BankPaymentPage(driver);
     }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void tearUp() {
         driver.get(basePage.properties.getProperty("url"));
     }
@@ -126,18 +126,50 @@ public class TestCases extends Setup {
         creditDebitCardPage.clickOnPayNowButton();
     }
 
-//    @Test(priority = 12, groups = {"regression"})
-//    public void verifyDetailsOnBankPaymentScreen() {
-//        basePage.clickOnBuyNowButton();
-//        checkoutPage.clickOnCheckoutButton();
-//        orderSummaryPage.switchToOrderSummaryFrame();
-//        orderSummaryPage.clickOnContinueButton();
-//        selectPaymentPage.clickOnCreditDebitCardButton();
-//        creditDebitCardPage.enterCardDetails();
-//        creditDebitCardPage.clickOnPayNowButton();
-//        bankPaymentPage.switchToBankPaymentPageFrame();
-//        Assert.assertTrue(bankPaymentPage.detailsAreDisplayedOnBankPaymentScreen());
-//    }
+    @Test(priority = 12, groups = {"regression"})
+    public void verifyDetailsOnBankPaymentScreen() {
+        basePage.clickOnBuyNowButton();
+        checkoutPage.clickOnCheckoutButton();
+        orderSummaryPage.switchToOrderSummaryFrame();
+        orderSummaryPage.clickOnContinueButton();
+        selectPaymentPage.clickOnCreditDebitCardButton();
+        creditDebitCardPage.enterCardDetails();
+        creditDebitCardPage.clickOnPayNowButton();
+        bankPaymentPage.switchToBankPaymentFrame();
+        Assert.assertTrue(bankPaymentPage.detailsAreDisplayedOnBankPaymentScreen());
+    }
+
+    @Test(priority = 13, groups = {"smoke", "regression"})
+    public void verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen() {
+        basePage.clickOnBuyNowButton();
+        checkoutPage.clickOnCheckoutButton();
+        orderSummaryPage.switchToOrderSummaryFrame();
+        orderSummaryPage.clickOnContinueButton();
+        selectPaymentPage.clickOnCreditDebitCardButton();
+        creditDebitCardPage.enterCardDetails();
+        creditDebitCardPage.clickOnPayNowButton();
+        bankPaymentPage.switchToBankPaymentFrame();
+        bankPaymentPage.enterPassword(basePage.properties.getProperty("password"));
+        bankPaymentPage.clickOnOkButton();
+        basePage.switchToDefaultContent();
+        Assert.assertTrue(basePage.successMessageIsDisplayed());
+    }
+
+    @Test(priority = 14, groups = {"regression"})
+    public void verifyOnGivingInvalidPasswordUserGetsRedirectedToOrderFailScreen() {
+        basePage.clickOnBuyNowButton();
+        checkoutPage.clickOnCheckoutButton();
+        orderSummaryPage.switchToOrderSummaryFrame();
+        orderSummaryPage.clickOnContinueButton();
+        selectPaymentPage.clickOnCreditDebitCardButton();
+        creditDebitCardPage.enterCardDetails();
+        creditDebitCardPage.clickOnPayNowButton();
+        bankPaymentPage.switchToBankPaymentFrame();
+        bankPaymentPage.enterPassword(basePage.properties.getProperty("invalid-password"));
+        bankPaymentPage.clickOnOkButton();
+        orderSummaryPage.switchToOrderSummaryFrame();
+        Assert.assertTrue(bankPaymentPage.failMessageIsDisplayed());
+    }
 
 
     @AfterClass
