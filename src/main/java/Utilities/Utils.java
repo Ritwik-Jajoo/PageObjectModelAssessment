@@ -4,6 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 
+import java.sql.Time;
 import java.util.List;
 
 public class Utils extends Setup {
@@ -41,11 +42,14 @@ public class Utils extends Setup {
             wait(element).clear();
             element.sendKeys(text);
         } catch (NoSuchElementException e) {
-            element.sendKeys(text);
             holdExecution(10);
+            element.sendKeys(text);
         } catch (StaleElementReferenceException e) {
-            element.sendKeys(text);
             holdExecution(10);
+            element.sendKeys(text);
+        }catch(TimeoutException e){
+            holdExecution(10);
+            element.sendKeys(text);
         }
     }
 

@@ -21,7 +21,7 @@ public class TestCases extends Setup {
 
     @BeforeClass(alwaysRun = true)
     public void launchBrowser() {
-        driver = launchBrowser("firefox");
+        driver = launchBrowser("chrome");
         basePage = new BasePage(driver);
         checkoutPage = new CheckoutPage(driver);
         orderSummaryPage = new OrderSummaryPage(driver);
@@ -149,6 +149,7 @@ public class TestCases extends Setup {
         selectPaymentPage.clickOnCreditDebitCardButton();
         creditDebitCardPage.enterCardDetails();
         creditDebitCardPage.clickOnPayNowButton();
+        creditDebitCardPage.holdExecution(2);
         bankPaymentPage.switchToBankPaymentFrame();
         bankPaymentPage.enterPassword(basePage.properties.getProperty("password"));
         bankPaymentPage.clickOnOkButton();
@@ -166,6 +167,7 @@ public class TestCases extends Setup {
         selectPaymentPage.clickOnCreditDebitCardButton();
         creditDebitCardPage.enterCardDetails();
         creditDebitCardPage.clickOnPayNowButton();
+        creditDebitCardPage.holdExecution(2);
         bankPaymentPage.switchToBankPaymentFrame();
         bankPaymentPage.enterPassword(basePage.properties.getProperty("invalid-password"));
         bankPaymentPage.clickOnOkButton();
@@ -196,7 +198,7 @@ public class TestCases extends Setup {
     }
 
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void tearDown() {
         driver.quit();
     }
