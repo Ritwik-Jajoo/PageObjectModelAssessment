@@ -14,8 +14,8 @@ public class BankPaymentPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//div[@class=\"page-container scroll\"]//iframe")
-    WebElement IframeElement;
+//    @FindBy(xpath = "//div[@class=\"page-container scroll\"]//iframe")
+//    WebElement IframeElement;
 
     @FindBy(xpath = "//div[@class='form-group']")
     List<WebElement> BankPaymentDetails;
@@ -26,18 +26,20 @@ public class BankPaymentPage extends BasePage {
     @FindBy(xpath = "//button[@class='btn btn-sm btn-success']")
     WebElement OkButton;
 
-    @FindBy(xpath = "//div[@class='text-failed text-bold']")
-    WebElement FailMessage;
+//    @FindBy(xpath = "//div[@class='text-failed text-bold']")
+//    WebElement FailMessage;
 
     @FindBy(xpath = "//div[@class='final-panel failed']")
     WebElement FailScreen;
+
+    @FindBy(xpath = "//button[@class='btn btn-sm btn-danger']")
+    WebElement CancelButton;
 
     public boolean detailsAreDisplayedOnBankPaymentScreen() {
         return areDisplayed(BankPaymentDetails);
     }
 
     public void switchToBankPaymentFrame() {
-        //wait(IframeElement);
         switchToFrame(0);
     }
 
@@ -51,5 +53,13 @@ public class BankPaymentPage extends BasePage {
 
     public boolean failMessageIsDisplayed(){
         return isDisplayed(FailScreen);
+    }
+
+    public void clickOnCancelButton(){
+        click(CancelButton);
+    }
+
+    public void switchToBankPaymentWindow(){
+        switchToWindowHandle();
     }
 }

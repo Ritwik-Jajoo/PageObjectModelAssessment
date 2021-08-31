@@ -2,9 +2,8 @@ package Utilities;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class Utils extends Setup {
@@ -26,11 +25,14 @@ public class Utils extends Setup {
             wait(element);
             element.click();
         } catch (NoSuchElementException e) {
-            element.click();
             holdExecution(10);
+            element.click();
         } catch (StaleElementReferenceException e) {
-            element.click();
             holdExecution(10);
+            element.click();
+        }catch(TimeoutException e){
+            holdExecution(10);
+            element.click();
         }
     }
 
@@ -124,7 +126,11 @@ public class Utils extends Setup {
         js.executeScript("arguments[0].scrollIntoView()", element);
     }
 
-    public void switchToDefaultContent(){
+    public void switchToDefaultContent() {
         driver.switchTo().defaultContent();
+    }
+
+    public void switchToWindowHandle() {
+        driver.switchTo().window(driver.getWindowHandle());
     }
 }

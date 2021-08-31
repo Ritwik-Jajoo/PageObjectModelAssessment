@@ -135,6 +135,7 @@ public class TestCases extends Setup {
         selectPaymentPage.clickOnCreditDebitCardButton();
         creditDebitCardPage.enterCardDetails();
         creditDebitCardPage.clickOnPayNowButton();
+        bankPaymentPage.holdExecution(2);
         bankPaymentPage.switchToBankPaymentFrame();
         Assert.assertTrue(bankPaymentPage.detailsAreDisplayedOnBankPaymentScreen());
     }
@@ -151,6 +152,7 @@ public class TestCases extends Setup {
         bankPaymentPage.switchToBankPaymentFrame();
         bankPaymentPage.enterPassword(basePage.properties.getProperty("password"));
         bankPaymentPage.clickOnOkButton();
+        bankPaymentPage.holdExecution(4);
         basePage.switchToDefaultContent();
         Assert.assertTrue(basePage.successMessageIsDisplayed());
     }
@@ -167,7 +169,29 @@ public class TestCases extends Setup {
         bankPaymentPage.switchToBankPaymentFrame();
         bankPaymentPage.enterPassword(basePage.properties.getProperty("invalid-password"));
         bankPaymentPage.clickOnOkButton();
+        bankPaymentPage.holdExecution(4);
+        bankPaymentPage.switchToBankPaymentWindow();
+        //driver.switchTo().window(driver.getWindowHandle());
+        bankPaymentPage.switchToBankPaymentFrame();
+        Assert.assertTrue(bankPaymentPage.failMessageIsDisplayed());
+    }
+
+    @Test(priority = 15, groups = {"regression"})
+    public void verifyOnClickingCancelUserGetsRedirectedToOrderFailScreen() {
+        basePage.clickOnBuyNowButton();
+        checkoutPage.clickOnCheckoutButton();
         orderSummaryPage.switchToOrderSummaryFrame();
+        orderSummaryPage.clickOnContinueButton();
+        selectPaymentPage.clickOnCreditDebitCardButton();
+        creditDebitCardPage.enterCardDetails();
+        creditDebitCardPage.clickOnPayNowButton();
+        creditDebitCardPage.holdExecution(2);
+        bankPaymentPage.switchToBankPaymentFrame();
+        bankPaymentPage.clickOnCancelButton();
+        bankPaymentPage.holdExecution(4);
+        bankPaymentPage.switchToBankPaymentWindow();
+        //driver.switchTo().window(driver.getWindowHandle());
+        bankPaymentPage.switchToBankPaymentFrame();
         Assert.assertTrue(bankPaymentPage.failMessageIsDisplayed());
     }
 

@@ -20,12 +20,15 @@ public class SelectPaymentPage extends BasePage {
     @FindBy(xpath = "//div[@class='list-content']")
     List<WebElement> PaymentOptions;
 
+    @FindBy(xpath = "//div[@class='list-title text-actionable-bold']")
+    List<WebElement> PaymentOptionsText;
+
     public boolean selectPaymentPageIsDisplayed() {
         return isDisplayed(SelectPaymentTitleText);
     }
 
     public boolean paymentOptionsAreDisplayed() {
-        return areDisplayed(PaymentOptions);
+        return areDisplayed(PaymentOptionsText);
     }
 
     public void clickOnCreditDebitCardButton() {
