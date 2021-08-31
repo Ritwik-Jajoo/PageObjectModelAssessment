@@ -2,11 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="REGRESSION-TEST">
     <test thread-count="1" name="test" parallel="false">
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="regression"></include>-->
-<!--            </run>-->
-<!--        </groups>-->
+        <!--        <groups>-->
+        <!--            <run>-->
+        <!--                <include name="regression"></include>-->
+        <!--                <include name="smoke"></include>-->
+        <!--            </run>-->
+        <!--        </groups>-->
 
         <classes>
             <class name="DemoMidTrans.TestCases"/>
