@@ -21,7 +21,8 @@ public class TestCases extends Setup {
 
     @BeforeClass(alwaysRun = true)
     public void launchBrowser() {
-        driver = launchBrowser("firefox");
+        driver = launchBrowser("chrome");
+//        driver = launchBrowser("firefox");
         basePage = new BasePage(driver);
         checkoutPage = new CheckoutPage(driver);
         orderSummaryPage = new OrderSummaryPage(driver);
