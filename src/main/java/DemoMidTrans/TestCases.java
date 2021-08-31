@@ -136,6 +136,7 @@ public class TestCases extends Setup {
         selectPaymentPage.clickOnCreditDebitCardButton();
         creditDebitCardPage.enterCardDetails();
         creditDebitCardPage.clickOnPayNowButton();
+//        verifyEnteringValidCardDetailsAndClickingOnPayNow();
         bankPaymentPage.switchToBankPaymentFrame();
         Assert.assertTrue(bankPaymentPage.detailsAreDisplayedOnBankPaymentScreen());
     }
@@ -149,6 +150,7 @@ public class TestCases extends Setup {
         selectPaymentPage.clickOnCreditDebitCardButton();
         creditDebitCardPage.enterCardDetails();
         creditDebitCardPage.clickOnPayNowButton();
+//        verifyEnteringValidCardDetailsAndClickingOnPayNow();
         bankPaymentPage.switchToBankPaymentFrame();
         bankPaymentPage.enterPassword(basePage.properties.getProperty("password"));
         bankPaymentPage.clickOnOkButton();
@@ -165,6 +167,7 @@ public class TestCases extends Setup {
         selectPaymentPage.clickOnCreditDebitCardButton();
         creditDebitCardPage.enterCardDetails();
         creditDebitCardPage.clickOnPayNowButton();
+//        verifyEnteringValidCardDetailsAndClickingOnPayNow();
         bankPaymentPage.switchToBankPaymentFrame();
         bankPaymentPage.enterPassword(basePage.properties.getProperty("invalid-password"));
         bankPaymentPage.clickOnOkButton();
@@ -182,6 +185,7 @@ public class TestCases extends Setup {
         selectPaymentPage.clickOnCreditDebitCardButton();
         creditDebitCardPage.enterCardDetails();
         creditDebitCardPage.clickOnPayNowButton();
+//        verifyEnteringValidCardDetailsAndClickingOnPayNow();
         bankPaymentPage.switchToBankPaymentFrame();
         bankPaymentPage.clickOnCancelButton();
         bankPaymentPage.switchToBankPaymentWindow();
