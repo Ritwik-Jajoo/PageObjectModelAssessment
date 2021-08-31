@@ -49,6 +49,7 @@ public class BankPaymentPage extends BasePage {
 
     public void clickOnOkButton(){
         click(OkButton);
+        holdExecution(4);
     }
 
     public boolean failMessageIsDisplayed(){
@@ -57,6 +58,7 @@ public class BankPaymentPage extends BasePage {
 
     public void clickOnCancelButton(){
         click(CancelButton);
+        holdExecution(4);
     }
 
     public void switchToBankPaymentWindow(){

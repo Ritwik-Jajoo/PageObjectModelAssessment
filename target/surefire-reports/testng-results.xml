@@ -2,160 +2,164 @@
 <testng-results skipped="0" failed="0" ignored="0" total="15" passed="15">
   <reporter-output>
   </reporter-output>
-  <suite name="REGRESSION-TEST" duration-ms="808220" started-at="2021-08-31T12:03:17Z" finished-at="2021-08-31T12:16:45Z">
+  <suite name="REGRESSION-TEST" duration-ms="823472" started-at="2021-08-31T13:12:04Z" finished-at="2021-08-31T13:25:47Z">
     <groups>
       <group name="regression">
-        <method signature="TestCases.verifyAllThePaymentOptionsAreListedOnSelectPaymentPage()[pri:8, instance:DemoMidTrans.TestCases@4411d970]" name="verifyAllThePaymentOptionsAreListedOnSelectPaymentPage" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp()[pri:2, instance:DemoMidTrans.TestCases@4411d970]" name="verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyClickingOnCouponCodesAndValidatingOrderAmount()[pri:10, instance:DemoMidTrans.TestCases@4411d970]" name="verifyClickingOnCouponCodesAndValidatingOrderAmount" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyCustomerDetailsArePresent()[pri:3, instance:DemoMidTrans.TestCases@4411d970]" name="verifyCustomerDetailsArePresent" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyDetailsOnBankPaymentScreen()[pri:12, instance:DemoMidTrans.TestCases@4411d970]" name="verifyDetailsOnBankPaymentScreen" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyEnteringValidCardDetailsAndClickingOnPayNow()[pri:11, instance:DemoMidTrans.TestCases@4411d970]" name="verifyEnteringValidCardDetailsAndClickingOnPayNow" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyOnClickingCancelUserGetsRedirectedToOrderFailScreen()[pri:15, instance:DemoMidTrans.TestCases@4411d970]" name="verifyOnClickingCancelUserGetsRedirectedToOrderFailScreen" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen()[pri:13, instance:DemoMidTrans.TestCases@4411d970]" name="verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyOnGivingInvalidPasswordUserGetsRedirectedToOrderFailScreen()[pri:14, instance:DemoMidTrans.TestCases@4411d970]" name="verifyOnGivingInvalidPasswordUserGetsRedirectedToOrderFailScreen" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyProductOrderDetailsOnOrderSummaryPopUpPage()[pri:6, instance:DemoMidTrans.TestCases@4411d970]" name="verifyProductOrderDetailsOnOrderSummaryPopUpPage" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyShoppingCartDetailsArePresent()[pri:1, instance:DemoMidTrans.TestCases@4411d970]" name="verifyShoppingCartDetailsArePresent" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyUserCanEnterCustomerDetails()[pri:4, instance:DemoMidTrans.TestCases@4411d970]" name="verifyUserCanEnterCustomerDetails" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyUserGetsRedirectedToCreditDebitCardDetailsScreen()[pri:9, instance:DemoMidTrans.TestCases@4411d970]" name="verifyUserGetsRedirectedToCreditDebitCardDetailsScreen" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage()[pri:7, instance:DemoMidTrans.TestCases@4411d970]" name="verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton()[pri:5, instance:DemoMidTrans.TestCases@4411d970]" name="verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyAllThePaymentOptionsAreListedOnSelectPaymentPage()[pri:8, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyAllThePaymentOptionsAreListedOnSelectPaymentPage" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp()[pri:2, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyClickingOnCouponCodesAndValidatingOrderAmount()[pri:10, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyClickingOnCouponCodesAndValidatingOrderAmount" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyCustomerDetailsArePresent()[pri:3, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyCustomerDetailsArePresent" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyDetailsOnBankPaymentScreen()[pri:12, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyDetailsOnBankPaymentScreen" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyEnteringValidCardDetailsAndClickingOnPayNow()[pri:11, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyEnteringValidCardDetailsAndClickingOnPayNow" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyOnClickingCancelUserGetsRedirectedToOrderFailScreen()[pri:15, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyOnClickingCancelUserGetsRedirectedToOrderFailScreen" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen()[pri:13, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyOnGivingInvalidPasswordUserGetsRedirectedToOrderFailScreen()[pri:14, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyOnGivingInvalidPasswordUserGetsRedirectedToOrderFailScreen" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyProductOrderDetailsOnOrderSummaryPopUpPage()[pri:6, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyProductOrderDetailsOnOrderSummaryPopUpPage" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyShoppingCartDetailsArePresent()[pri:1, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyShoppingCartDetailsArePresent" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyUserCanEnterCustomerDetails()[pri:4, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyUserCanEnterCustomerDetails" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyUserGetsRedirectedToCreditDebitCardDetailsScreen()[pri:9, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyUserGetsRedirectedToCreditDebitCardDetailsScreen" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage()[pri:7, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton()[pri:5, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton" class="DemoMidTrans.TestCases"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="TestCases.verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp()[pri:2, instance:DemoMidTrans.TestCases@4411d970]" name="verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyEnteringValidCardDetailsAndClickingOnPayNow()[pri:11, instance:DemoMidTrans.TestCases@4411d970]" name="verifyEnteringValidCardDetailsAndClickingOnPayNow" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen()[pri:13, instance:DemoMidTrans.TestCases@4411d970]" name="verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyUserGetsRedirectedToCreditDebitCardDetailsScreen()[pri:9, instance:DemoMidTrans.TestCases@4411d970]" name="verifyUserGetsRedirectedToCreditDebitCardDetailsScreen" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage()[pri:7, instance:DemoMidTrans.TestCases@4411d970]" name="verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage" class="DemoMidTrans.TestCases"/>
-        <method signature="TestCases.verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton()[pri:5, instance:DemoMidTrans.TestCases@4411d970]" name="verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp()[pri:2, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyEnteringValidCardDetailsAndClickingOnPayNow()[pri:11, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyEnteringValidCardDetailsAndClickingOnPayNow" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen()[pri:13, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyUserGetsRedirectedToCreditDebitCardDetailsScreen()[pri:9, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyUserGetsRedirectedToCreditDebitCardDetailsScreen" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage()[pri:7, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage" class="DemoMidTrans.TestCases"/>
+        <method signature="TestCases.verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton()[pri:5, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton" class="DemoMidTrans.TestCases"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="test" duration-ms="808220" started-at="2021-08-31T12:03:17Z" finished-at="2021-08-31T12:16:45Z">
+    <test name="test" duration-ms="823472" started-at="2021-08-31T13:12:04Z" finished-at="2021-08-31T13:25:47Z">
       <class name="DemoMidTrans.TestCases">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="launchBrowser" is-config="true" duration-ms="2247" started-at="2021-08-31T12:03:17Z" finished-at="2021-08-31T12:03:20Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="launchBrowser" is-config="true" duration-ms="4582" started-at="2021-08-31T13:12:04Z" finished-at="2021-08-31T13:12:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="tearUp" is-config="true" duration-ms="1769" started-at="2021-08-31T12:03:20Z" finished-at="2021-08-31T12:03:21Z">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearUp" is-config="true" duration-ms="2183" started-at="2021-08-31T13:12:08Z" finished-at="2021-08-31T13:12:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="PASS" signature="verifyShoppingCartDetailsArePresent()[pri:1, instance:DemoMidTrans.TestCases@4411d970]" name="verifyShoppingCartDetailsArePresent" duration-ms="2406" started-at="2021-08-31T12:03:21Z" finished-at="2021-08-31T12:03:24Z">
+        <test-method status="PASS" signature="verifyShoppingCartDetailsArePresent()[pri:1, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyShoppingCartDetailsArePresent" duration-ms="2667" started-at="2021-08-31T13:12:10Z" finished-at="2021-08-31T13:12:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyShoppingCartDetailsArePresent -->
-        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="tearUp" is-config="true" duration-ms="1475" started-at="2021-08-31T12:03:24Z" finished-at="2021-08-31T12:03:25Z">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearUp" is-config="true" duration-ms="1551" started-at="2021-08-31T13:12:13Z" finished-at="2021-08-31T13:12:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="PASS" signature="verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp()[pri:2, instance:DemoMidTrans.TestCases@4411d970]" name="verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp" duration-ms="2261" started-at="2021-08-31T12:03:25Z" finished-at="2021-08-31T12:03:27Z">
+        <test-method status="PASS" signature="verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp()[pri:2, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp" duration-ms="2423" started-at="2021-08-31T13:12:15Z" finished-at="2021-08-31T13:12:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp -->
-        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="tearUp" is-config="true" duration-ms="1113" started-at="2021-08-31T12:03:27Z" finished-at="2021-08-31T12:03:29Z">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearUp" is-config="true" duration-ms="1301" started-at="2021-08-31T13:12:17Z" finished-at="2021-08-31T13:12:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="PASS" signature="verifyCustomerDetailsArePresent()[pri:3, instance:DemoMidTrans.TestCases@4411d970]" name="verifyCustomerDetailsArePresent" duration-ms="2598" started-at="2021-08-31T12:03:29Z" finished-at="2021-08-31T12:03:31Z">
+        <test-method status="PASS" signature="verifyCustomerDetailsArePresent()[pri:3, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyCustomerDetailsArePresent" duration-ms="2788" started-at="2021-08-31T13:12:18Z" finished-at="2021-08-31T13:12:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCustomerDetailsArePresent -->
-        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="tearUp" is-config="true" duration-ms="1222" started-at="2021-08-31T12:03:31Z" finished-at="2021-08-31T12:03:32Z">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearUp" is-config="true" duration-ms="1948" started-at="2021-08-31T13:12:21Z" finished-at="2021-08-31T13:12:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="PASS" signature="verifyUserCanEnterCustomerDetails()[pri:4, instance:DemoMidTrans.TestCases@4411d970]" name="verifyUserCanEnterCustomerDetails" duration-ms="5401" started-at="2021-08-31T12:03:32Z" finished-at="2021-08-31T12:03:38Z">
+        <test-method status="PASS" signature="verifyUserCanEnterCustomerDetails()[pri:4, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyUserCanEnterCustomerDetails" duration-ms="5530" started-at="2021-08-31T13:12:23Z" finished-at="2021-08-31T13:12:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserCanEnterCustomerDetails -->
-        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="tearUp" is-config="true" duration-ms="896" started-at="2021-08-31T12:03:38Z" finished-at="2021-08-31T12:03:39Z">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearUp" is-config="true" duration-ms="3709" started-at="2021-08-31T13:12:29Z" finished-at="2021-08-31T13:12:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="PASS" signature="verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton()[pri:5, instance:DemoMidTrans.TestCases@4411d970]" name="verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton" duration-ms="62483" started-at="2021-08-31T12:03:39Z" finished-at="2021-08-31T12:04:41Z">
+        <test-method status="PASS" signature="verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton()[pri:5, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton" duration-ms="62869" started-at="2021-08-31T13:12:32Z" finished-at="2021-08-31T13:13:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton -->
-        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="tearUp" is-config="true" duration-ms="1301" started-at="2021-08-31T12:04:41Z" finished-at="2021-08-31T12:04:42Z">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearUp" is-config="true" duration-ms="1513" started-at="2021-08-31T13:13:35Z" finished-at="2021-08-31T13:13:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="PASS" signature="verifyProductOrderDetailsOnOrderSummaryPopUpPage()[pri:6, instance:DemoMidTrans.TestCases@4411d970]" name="verifyProductOrderDetailsOnOrderSummaryPopUpPage" duration-ms="62886" started-at="2021-08-31T12:04:42Z" finished-at="2021-08-31T12:05:45Z">
+        <test-method status="PASS" signature="verifyProductOrderDetailsOnOrderSummaryPopUpPage()[pri:6, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyProductOrderDetailsOnOrderSummaryPopUpPage" duration-ms="63001" started-at="2021-08-31T13:13:37Z" finished-at="2021-08-31T13:14:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyProductOrderDetailsOnOrderSummaryPopUpPage -->
-        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="tearUp" is-config="true" duration-ms="1204" started-at="2021-08-31T12:05:45Z" finished-at="2021-08-31T12:05:47Z">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearUp" is-config="true" duration-ms="1663" started-at="2021-08-31T13:14:40Z" finished-at="2021-08-31T13:14:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="PASS" signature="verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage()[pri:7, instance:DemoMidTrans.TestCases@4411d970]" name="verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage" duration-ms="64984" started-at="2021-08-31T12:05:47Z" finished-at="2021-08-31T12:06:52Z">
+        <test-method status="PASS" signature="verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage()[pri:7, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage" duration-ms="64993" started-at="2021-08-31T13:14:41Z" finished-at="2021-08-31T13:15:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage -->
-        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="tearUp" is-config="true" duration-ms="1242" started-at="2021-08-31T12:06:52Z" finished-at="2021-08-31T12:06:53Z">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearUp" is-config="true" duration-ms="1960" started-at="2021-08-31T13:15:46Z" finished-at="2021-08-31T13:15:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="PASS" signature="verifyAllThePaymentOptionsAreListedOnSelectPaymentPage()[pri:8, instance:DemoMidTrans.TestCases@4411d970]" name="verifyAllThePaymentOptionsAreListedOnSelectPaymentPage" duration-ms="65535" started-at="2021-08-31T12:06:53Z" finished-at="2021-08-31T12:07:58Z">
+        <test-method status="PASS" signature="verifyAllThePaymentOptionsAreListedOnSelectPaymentPage()[pri:8, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyAllThePaymentOptionsAreListedOnSelectPaymentPage" duration-ms="65526" started-at="2021-08-31T13:15:48Z" finished-at="2021-08-31T13:16:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAllThePaymentOptionsAreListedOnSelectPaymentPage -->
-        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="tearUp" is-config="true" duration-ms="2486" started-at="2021-08-31T12:07:58Z" finished-at="2021-08-31T12:08:01Z">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearUp" is-config="true" duration-ms="4472" started-at="2021-08-31T13:16:54Z" finished-at="2021-08-31T13:16:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="PASS" signature="verifyUserGetsRedirectedToCreditDebitCardDetailsScreen()[pri:9, instance:DemoMidTrans.TestCases@4411d970]" name="verifyUserGetsRedirectedToCreditDebitCardDetailsScreen" duration-ms="66930" started-at="2021-08-31T12:08:01Z" finished-at="2021-08-31T12:09:08Z">
+        <test-method status="PASS" signature="verifyUserGetsRedirectedToCreditDebitCardDetailsScreen()[pri:9, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyUserGetsRedirectedToCreditDebitCardDetailsScreen" duration-ms="67142" started-at="2021-08-31T13:16:58Z" finished-at="2021-08-31T13:18:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserGetsRedirectedToCreditDebitCardDetailsScreen -->
-        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="tearUp" is-config="true" duration-ms="1376" started-at="2021-08-31T12:09:08Z" finished-at="2021-08-31T12:09:09Z">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearUp" is-config="true" duration-ms="1359" started-at="2021-08-31T13:18:06Z" finished-at="2021-08-31T13:18:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="PASS" signature="verifyClickingOnCouponCodesAndValidatingOrderAmount()[pri:10, instance:DemoMidTrans.TestCases@4411d970]" name="verifyClickingOnCouponCodesAndValidatingOrderAmount" duration-ms="73882" started-at="2021-08-31T12:09:09Z" finished-at="2021-08-31T12:10:23Z">
+        <test-method status="PASS" signature="verifyClickingOnCouponCodesAndValidatingOrderAmount()[pri:10, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyClickingOnCouponCodesAndValidatingOrderAmount" duration-ms="74633" started-at="2021-08-31T13:18:07Z" finished-at="2021-08-31T13:19:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyClickingOnCouponCodesAndValidatingOrderAmount -->
-        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="tearUp" is-config="true" duration-ms="961" started-at="2021-08-31T12:10:23Z" finished-at="2021-08-31T12:10:24Z">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearUp" is-config="true" duration-ms="1679" started-at="2021-08-31T13:19:22Z" finished-at="2021-08-31T13:19:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="PASS" signature="verifyEnteringValidCardDetailsAndClickingOnPayNow()[pri:11, instance:DemoMidTrans.TestCases@4411d970]" name="verifyEnteringValidCardDetailsAndClickingOnPayNow" duration-ms="70025" started-at="2021-08-31T12:10:24Z" finished-at="2021-08-31T12:11:34Z">
+        <test-method status="PASS" signature="verifyEnteringValidCardDetailsAndClickingOnPayNow()[pri:11, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyEnteringValidCardDetailsAndClickingOnPayNow" duration-ms="71792" started-at="2021-08-31T13:19:23Z" finished-at="2021-08-31T13:20:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyEnteringValidCardDetailsAndClickingOnPayNow -->
-        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="tearUp" is-config="true" duration-ms="2727" started-at="2021-08-31T12:11:34Z" finished-at="2021-08-31T12:11:37Z">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearUp" is-config="true" duration-ms="1453" started-at="2021-08-31T13:20:35Z" finished-at="2021-08-31T13:20:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="PASS" signature="verifyDetailsOnBankPaymentScreen()[pri:12, instance:DemoMidTrans.TestCases@4411d970]" name="verifyDetailsOnBankPaymentScreen" duration-ms="72445" started-at="2021-08-31T12:11:37Z" finished-at="2021-08-31T12:12:49Z">
+        <test-method status="PASS" signature="verifyDetailsOnBankPaymentScreen()[pri:12, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyDetailsOnBankPaymentScreen" duration-ms="72054" started-at="2021-08-31T13:20:36Z" finished-at="2021-08-31T13:21:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDetailsOnBankPaymentScreen -->
-        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="tearUp" is-config="true" duration-ms="1042" started-at="2021-08-31T12:12:49Z" finished-at="2021-08-31T12:12:50Z">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearUp" is-config="true" duration-ms="1474" started-at="2021-08-31T13:21:49Z" finished-at="2021-08-31T13:21:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="PASS" signature="verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen()[pri:13, instance:DemoMidTrans.TestCases@4411d970]" name="verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen" duration-ms="78425" started-at="2021-08-31T12:12:50Z" finished-at="2021-08-31T12:14:09Z">
+        <test-method status="PASS" signature="verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen()[pri:13, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen" duration-ms="78771" started-at="2021-08-31T13:21:50Z" finished-at="2021-08-31T13:23:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen -->
-        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="tearUp" is-config="true" duration-ms="1292" started-at="2021-08-31T12:14:09Z" finished-at="2021-08-31T12:14:10Z">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearUp" is-config="true" duration-ms="1564" started-at="2021-08-31T13:23:09Z" finished-at="2021-08-31T13:23:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="PASS" signature="verifyOnGivingInvalidPasswordUserGetsRedirectedToOrderFailScreen()[pri:14, instance:DemoMidTrans.TestCases@4411d970]" name="verifyOnGivingInvalidPasswordUserGetsRedirectedToOrderFailScreen" duration-ms="77586" started-at="2021-08-31T12:14:10Z" finished-at="2021-08-31T12:15:27Z">
+        <test-method status="PASS" signature="verifyOnGivingInvalidPasswordUserGetsRedirectedToOrderFailScreen()[pri:14, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyOnGivingInvalidPasswordUserGetsRedirectedToOrderFailScreen" duration-ms="77304" started-at="2021-08-31T13:23:10Z" finished-at="2021-08-31T13:24:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyOnGivingInvalidPasswordUserGetsRedirectedToOrderFailScreen -->
-        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@4411d970]" name="tearUp" is-config="true" duration-ms="914" started-at="2021-08-31T12:15:27Z" finished-at="2021-08-31T12:15:28Z">
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearUp" is-config="true" duration-ms="1684" started-at="2021-08-31T13:24:28Z" finished-at="2021-08-31T13:24:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->
-        <test-method status="PASS" signature="verifyOnClickingCancelUserGetsRedirectedToOrderFailScreen()[pri:15, instance:DemoMidTrans.TestCases@4411d970]" name="verifyOnClickingCancelUserGetsRedirectedToOrderFailScreen" duration-ms="77071" started-at="2021-08-31T12:15:28Z" finished-at="2021-08-31T12:16:45Z">
+        <test-method status="PASS" signature="verifyOnClickingCancelUserGetsRedirectedToOrderFailScreen()[pri:15, instance:DemoMidTrans.TestCases@2812cbfa]" name="verifyOnClickingCancelUserGetsRedirectedToOrderFailScreen" duration-ms="77181" started-at="2021-08-31T13:24:29Z" finished-at="2021-08-31T13:25:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyOnClickingCancelUserGetsRedirectedToOrderFailScreen -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:DemoMidTrans.TestCases@2812cbfa]" name="tearDown" is-config="true" duration-ms="637" started-at="2021-08-31T13:25:47Z" finished-at="2021-08-31T13:25:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- DemoMidTrans.TestCases -->
     </test> <!-- test -->
   </suite> <!-- REGRESSION-TEST -->

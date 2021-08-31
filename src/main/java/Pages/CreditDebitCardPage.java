@@ -75,7 +75,7 @@ public class CreditDebitCardPage extends BasePage {
 
     public void clickOnPayNowButton() {
         click(PayNowButton);
-        holdExecution(2);
+        holdExecution(4);
     }
 
 }

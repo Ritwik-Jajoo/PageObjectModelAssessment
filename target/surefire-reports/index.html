@@ -311,11 +311,6 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;REGRESSION-TEST&quot;&gt;
   &lt;test thread-count=&quot;1&quot; verbose=&quot;0&quot; name=&quot;test&quot;&gt;
-    &lt;groups&gt;
-      &lt;run&gt;
-        &lt;include name=&quot;regression&quot;/&gt;
-      &lt;/run&gt;
-    &lt;/groups&gt;
     &lt;classes&gt;
       &lt;class name=&quot;DemoMidTrans.TestCases&quot;/&gt;
     &lt;/classes&gt;
@@ -453,63 +448,63 @@ data.addRows(15);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen')
 data.setCell(0, 2, 'DemoMidTrans.TestCases')
-data.setCell(0, 3, 78425);
+data.setCell(0, 3, 78771);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyOnGivingInvalidPasswordUserGetsRedirectedToOrderFailScreen')
 data.setCell(1, 2, 'DemoMidTrans.TestCases')
-data.setCell(1, 3, 77586);
+data.setCell(1, 3, 77304);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyOnClickingCancelUserGetsRedirectedToOrderFailScreen')
 data.setCell(2, 2, 'DemoMidTrans.TestCases')
-data.setCell(2, 3, 77071);
+data.setCell(2, 3, 77181);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'verifyClickingOnCouponCodesAndValidatingOrderAmount')
 data.setCell(3, 2, 'DemoMidTrans.TestCases')
-data.setCell(3, 3, 73882);
+data.setCell(3, 3, 74633);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifyDetailsOnBankPaymentScreen')
 data.setCell(4, 2, 'DemoMidTrans.TestCases')
-data.setCell(4, 3, 72445);
+data.setCell(4, 3, 72054);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'verifyEnteringValidCardDetailsAndClickingOnPayNow')
 data.setCell(5, 2, 'DemoMidTrans.TestCases')
-data.setCell(5, 3, 70025);
+data.setCell(5, 3, 71792);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'verifyUserGetsRedirectedToCreditDebitCardDetailsScreen')
 data.setCell(6, 2, 'DemoMidTrans.TestCases')
-data.setCell(6, 3, 66930);
+data.setCell(6, 3, 67142);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'verifyAllThePaymentOptionsAreListedOnSelectPaymentPage')
 data.setCell(7, 2, 'DemoMidTrans.TestCases')
-data.setCell(7, 3, 65535);
+data.setCell(7, 3, 65526);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage')
 data.setCell(8, 2, 'DemoMidTrans.TestCases')
-data.setCell(8, 3, 64984);
+data.setCell(8, 3, 64993);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'verifyProductOrderDetailsOnOrderSummaryPopUpPage')
 data.setCell(9, 2, 'DemoMidTrans.TestCases')
-data.setCell(9, 3, 62886);
+data.setCell(9, 3, 63001);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton')
 data.setCell(10, 2, 'DemoMidTrans.TestCases')
-data.setCell(10, 3, 62483);
+data.setCell(10, 3, 62869);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'verifyUserCanEnterCustomerDetails')
 data.setCell(11, 2, 'DemoMidTrans.TestCases')
-data.setCell(11, 3, 5401);
+data.setCell(11, 3, 5530);
 data.setCell(12, 0, 12)
 data.setCell(12, 1, 'verifyCustomerDetailsArePresent')
 data.setCell(12, 2, 'DemoMidTrans.TestCases')
-data.setCell(12, 3, 2598);
+data.setCell(12, 3, 2788);
 data.setCell(13, 0, 13)
 data.setCell(13, 1, 'verifyShoppingCartDetailsArePresent')
 data.setCell(13, 2, 'DemoMidTrans.TestCases')
-data.setCell(13, 3, 2406);
+data.setCell(13, 3, 2667);
 data.setCell(14, 0, 14)
 data.setCell(14, 1, 'verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp')
 data.setCell(14, 2, 'DemoMidTrans.TestCases')
-data.setCell(14, 3, 2261);
+data.setCell(14, 3, 2423);
 window.suiteTableData['REGRESSION-TEST']= { tableData: data, tableDiv: 'times-div-REGRESSION-TEST'}
 return data;
 }
@@ -547,124 +542,128 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">tearUp</span>
-                <span class="method-start">2257 ms</span>
+                <span class="method-start">4586 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyShoppingCartDetailsArePresent</span>
-                <span class="method-start">4026 ms</span>
+                <span class="method-start">6769 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">tearUp</span>
-                <span class="method-start">6436 ms</span>
+                <span class="method-start">9439 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp</span>
-                <span class="method-start">7911 ms</span>
+                <span class="method-start">10990 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">tearUp</span>
-                <span class="method-start">10173 ms</span>
+                <span class="method-start">13415 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyCustomerDetailsArePresent</span>
-                <span class="method-start">11286 ms</span>
+                <span class="method-start">14717 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">tearUp</span>
-                <span class="method-start">13884 ms</span>
+                <span class="method-start">17506 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserCanEnterCustomerDetails</span>
-                <span class="method-start">15106 ms</span>
+                <span class="method-start">19455 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">tearUp</span>
-                <span class="method-start">20507 ms</span>
+                <span class="method-start">24987 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton</span>
-                <span class="method-start">21403 ms</span>
+                <span class="method-start">28696 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">tearUp</span>
-                <span class="method-start">83887 ms</span>
+                <span class="method-start">91566 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyProductOrderDetailsOnOrderSummaryPopUpPage</span>
-                <span class="method-start">85188 ms</span>
+                <span class="method-start">93079 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">tearUp</span>
-                <span class="method-start">148076 ms</span>
+                <span class="method-start">156081 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage</span>
-                <span class="method-start">149282 ms</span>
+                <span class="method-start">157744 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">tearUp</span>
-                <span class="method-start">214267 ms</span>
+                <span class="method-start">222751 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAllThePaymentOptionsAreListedOnSelectPaymentPage</span>
-                <span class="method-start">215509 ms</span>
+                <span class="method-start">224712 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">tearUp</span>
-                <span class="method-start">281044 ms</span>
+                <span class="method-start">290249 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserGetsRedirectedToCreditDebitCardDetailsScreen</span>
-                <span class="method-start">283530 ms</span>
+                <span class="method-start">294721 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">tearUp</span>
-                <span class="method-start">350461 ms</span>
+                <span class="method-start">361863 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyClickingOnCouponCodesAndValidatingOrderAmount</span>
-                <span class="method-start">351838 ms</span>
+                <span class="method-start">363222 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">tearUp</span>
-                <span class="method-start">425721 ms</span>
+                <span class="method-start">437858 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyEnteringValidCardDetailsAndClickingOnPayNow</span>
-                <span class="method-start">426682 ms</span>
+                <span class="method-start">439538 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">tearUp</span>
-                <span class="method-start">496709 ms</span>
+                <span class="method-start">511331 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyDetailsOnBankPaymentScreen</span>
-                <span class="method-start">499436 ms</span>
+                <span class="method-start">512785 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">tearUp</span>
-                <span class="method-start">571881 ms</span>
+                <span class="method-start">584840 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen</span>
-                <span class="method-start">572923 ms</span>
+                <span class="method-start">586314 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">tearUp</span>
-                <span class="method-start">651349 ms</span>
+                <span class="method-start">665086 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyOnGivingInvalidPasswordUserGetsRedirectedToOrderFailScreen</span>
-                <span class="method-start">652642 ms</span>
+                <span class="method-start">666651 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">tearUp</span>
-                <span class="method-start">730229 ms</span>
+                <span class="method-start">743962 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyOnClickingCancelUserGetsRedirectedToOrderFailScreen</span>
-                <span class="method-start">731143 ms</span>
+                <span class="method-start">745646 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">822828 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

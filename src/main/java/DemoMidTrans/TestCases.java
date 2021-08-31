@@ -21,7 +21,7 @@ public class TestCases extends Setup {
 
     @BeforeClass(alwaysRun = true)
     public void launchBrowser() {
-        driver = launchBrowser("chrome");
+        driver = launchBrowser("firefox");
         basePage = new BasePage(driver);
         checkoutPage = new CheckoutPage(driver);
         orderSummaryPage = new OrderSummaryPage(driver);
@@ -135,7 +135,6 @@ public class TestCases extends Setup {
         selectPaymentPage.clickOnCreditDebitCardButton();
         creditDebitCardPage.enterCardDetails();
         creditDebitCardPage.clickOnPayNowButton();
-        bankPaymentPage.holdExecution(2);
         bankPaymentPage.switchToBankPaymentFrame();
         Assert.assertTrue(bankPaymentPage.detailsAreDisplayedOnBankPaymentScreen());
     }
@@ -149,11 +148,9 @@ public class TestCases extends Setup {
         selectPaymentPage.clickOnCreditDebitCardButton();
         creditDebitCardPage.enterCardDetails();
         creditDebitCardPage.clickOnPayNowButton();
-        creditDebitCardPage.holdExecution(2);
         bankPaymentPage.switchToBankPaymentFrame();
         bankPaymentPage.enterPassword(basePage.properties.getProperty("password"));
         bankPaymentPage.clickOnOkButton();
-        bankPaymentPage.holdExecution(4);
         basePage.switchToDefaultContent();
         Assert.assertTrue(basePage.successMessageIsDisplayed());
     }
@@ -167,13 +164,10 @@ public class TestCases extends Setup {
         selectPaymentPage.clickOnCreditDebitCardButton();
         creditDebitCardPage.enterCardDetails();
         creditDebitCardPage.clickOnPayNowButton();
-        creditDebitCardPage.holdExecution(2);
         bankPaymentPage.switchToBankPaymentFrame();
         bankPaymentPage.enterPassword(basePage.properties.getProperty("invalid-password"));
         bankPaymentPage.clickOnOkButton();
-        bankPaymentPage.holdExecution(4);
         bankPaymentPage.switchToBankPaymentWindow();
-        //driver.switchTo().window(driver.getWindowHandle());
         bankPaymentPage.switchToBankPaymentFrame();
         Assert.assertTrue(bankPaymentPage.failMessageIsDisplayed());
     }
@@ -187,12 +181,9 @@ public class TestCases extends Setup {
         selectPaymentPage.clickOnCreditDebitCardButton();
         creditDebitCardPage.enterCardDetails();
         creditDebitCardPage.clickOnPayNowButton();
-        creditDebitCardPage.holdExecution(2);
         bankPaymentPage.switchToBankPaymentFrame();
         bankPaymentPage.clickOnCancelButton();
-        bankPaymentPage.holdExecution(4);
         bankPaymentPage.switchToBankPaymentWindow();
-        //driver.switchTo().window(driver.getWindowHandle());
         bankPaymentPage.switchToBankPaymentFrame();
         Assert.assertTrue(bankPaymentPage.failMessageIsDisplayed());
     }

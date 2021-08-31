@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="808.673" tests="15" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="823.935" tests="15" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_301\jre\bin"/>
@@ -64,19 +64,19 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="verifyShoppingCartDetailsArePresent" classname="DemoMidTrans.TestCases" time="2.41"/>
-  <testcase name="verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp" classname="DemoMidTrans.TestCases" time="2.26"/>
-  <testcase name="verifyCustomerDetailsArePresent" classname="DemoMidTrans.TestCases" time="2.598"/>
-  <testcase name="verifyUserCanEnterCustomerDetails" classname="DemoMidTrans.TestCases" time="5.401"/>
-  <testcase name="verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton" classname="DemoMidTrans.TestCases" time="62.483"/>
-  <testcase name="verifyProductOrderDetailsOnOrderSummaryPopUpPage" classname="DemoMidTrans.TestCases" time="62.887"/>
-  <testcase name="verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage" classname="DemoMidTrans.TestCases" time="64.984"/>
-  <testcase name="verifyAllThePaymentOptionsAreListedOnSelectPaymentPage" classname="DemoMidTrans.TestCases" time="65.534"/>
-  <testcase name="verifyUserGetsRedirectedToCreditDebitCardDetailsScreen" classname="DemoMidTrans.TestCases" time="66.931"/>
-  <testcase name="verifyClickingOnCouponCodesAndValidatingOrderAmount" classname="DemoMidTrans.TestCases" time="73.883"/>
-  <testcase name="verifyEnteringValidCardDetailsAndClickingOnPayNow" classname="DemoMidTrans.TestCases" time="70.026"/>
-  <testcase name="verifyDetailsOnBankPaymentScreen" classname="DemoMidTrans.TestCases" time="72.445"/>
-  <testcase name="verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen" classname="DemoMidTrans.TestCases" time="78.424"/>
-  <testcase name="verifyOnGivingInvalidPasswordUserGetsRedirectedToOrderFailScreen" classname="DemoMidTrans.TestCases" time="77.586"/>
-  <testcase name="verifyOnClickingCancelUserGetsRedirectedToOrderFailScreen" classname="DemoMidTrans.TestCases" time="77.071"/>
+  <testcase name="verifyShoppingCartDetailsArePresent" classname="DemoMidTrans.TestCases" time="2.668"/>
+  <testcase name="verifyClickingOnBuyNowUserGetsRedirectedToCheckoutPopUp" classname="DemoMidTrans.TestCases" time="2.424"/>
+  <testcase name="verifyCustomerDetailsArePresent" classname="DemoMidTrans.TestCases" time="2.789"/>
+  <testcase name="verifyUserCanEnterCustomerDetails" classname="DemoMidTrans.TestCases" time="5.53"/>
+  <testcase name="verifyUserRedirectsToOrderSummaryPopUpOnClickingCheckoutButton" classname="DemoMidTrans.TestCases" time="62.869"/>
+  <testcase name="verifyProductOrderDetailsOnOrderSummaryPopUpPage" classname="DemoMidTrans.TestCases" time="63.001"/>
+  <testcase name="verifyUserGetsRedirectedToSelectPaymentPageOnClickingContinueInOrderSummaryPage" classname="DemoMidTrans.TestCases" time="65.006"/>
+  <testcase name="verifyAllThePaymentOptionsAreListedOnSelectPaymentPage" classname="DemoMidTrans.TestCases" time="65.525"/>
+  <testcase name="verifyUserGetsRedirectedToCreditDebitCardDetailsScreen" classname="DemoMidTrans.TestCases" time="67.139"/>
+  <testcase name="verifyClickingOnCouponCodesAndValidatingOrderAmount" classname="DemoMidTrans.TestCases" time="74.632"/>
+  <testcase name="verifyEnteringValidCardDetailsAndClickingOnPayNow" classname="DemoMidTrans.TestCases" time="71.793"/>
+  <testcase name="verifyDetailsOnBankPaymentScreen" classname="DemoMidTrans.TestCases" time="72.055"/>
+  <testcase name="verifyOnClickingOnOkButtonUserGetsRedirectedToOrderSuccessfulScreen" classname="DemoMidTrans.TestCases" time="78.77"/>
+  <testcase name="verifyOnGivingInvalidPasswordUserGetsRedirectedToOrderFailScreen" classname="DemoMidTrans.TestCases" time="77.304"/>
+  <testcase name="verifyOnClickingCancelUserGetsRedirectedToOrderFailScreen" classname="DemoMidTrans.TestCases" time="77.182"/>
 </testsuite>
